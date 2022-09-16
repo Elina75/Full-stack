@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments.html :: headerfiles"></head>
+<body>
+<header th:insert="fragments.html :: nav"></header>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+            <h1 class="text-center"> Update Label </h1>
+            <div class="card-body">
+                <form th:action="@{/labels/{id} (id=${label.label_id})}" th:object="${label}" method="POST">
+                    <div class="form-group">
+                        <label> Label's Name </label>
+                        <input
+                                type="text"
+                                name="Name"
+                                th:field="*{name}"
+                                class="form-control"
+                                placeholder="Enter Label's Name"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label> Label's category </label>
+                        <input
+                                type="text"
+                                name="category"
+                                th:field="*{category}"
+                                class="form-control"
+                                placeholder="Enter Label's category"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label> Label's description </label>
+                        <input
+                                type="text"
+                                name="description"
+                                th:field="*{description}"
+                                class="form-control"
+                                placeholder="Enter Label's description"
+                        />
+                    </div>
+
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

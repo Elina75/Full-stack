@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments.html :: headerfiles"></head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container {
+
+            text-align: left;
+            color: white;
+            font-size: 50px;
+            font-family: "Comic Sans MS";
+
+        }
+
+        .top-left {
+            position: absolute;
+            top: 350px;
+
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #FAD7A0;
+        }
+    </style>
+</head>
+<!---->
+<header th:insert="fragments.html :: nav"></header>
+<Body background='https://mn.gov/covid19/assets/food-support_tcm1148-428592.jpg' style="background-size: cover;">
+<!-- Page content goes here -->
+<div class="container">
+    <!--        <img src='https://mn.gov/covid19/assets/food-support_tcm1148-428592.jpg' alt="Snow" style="width:660px;height: 440px" >-->
+    <div class="top-left">Welcome, Food helper app!</div>
+    <!--            <img src='static/images/food.jpg' alt="Snow" style="width:100%;">-->
+    <!--        <h1 class="display-4"></h1>-->
+    <!--        <p class="lead">This is the home page of our web application. Anyone can access it, even if they have not signed in.</p>-->
+    <!--        <hr class="my-4">-->
+    <!--        <p>Using this example, you will become more familiar with Spring Security concepts:)</p>-->
+    <!--        <p class="lead">-->
+    <!--            <a class="btn btn-primary btn-lg" href="https://spring.io/projects/spring-security" role="button">Learn more about Spring Security</a>-->
+    <!--        </p>-->
+</div>
+</body>
+</html>
